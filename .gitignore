@@ -5,3 +5,5 @@ samconfig.toml
 target
 
 .DS_Store
+
+outputs.txt

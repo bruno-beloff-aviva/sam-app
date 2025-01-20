@@ -5,5 +5,6 @@ echo "Dev endpoint: $DEV_ENDPOINT"
 echo "Prod endpoint: $PROD_ENDPOINT"
 
 curl -s $DEV_ENDPOINT
+echo "\n"
 curl -s $PROD_ENDPOINT
-
+echo "\n"
