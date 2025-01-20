@@ -52,8 +52,8 @@ func TestHandler(t *testing.T) {
 				t.Errorf("Expected response %v, but got %v", testCase.expectedBody, response.Body)
 			}
 
-			if response.StatusCode != 300 {
-				t.Errorf("Expected status code 300, but got %v", response.StatusCode)
+			if response.StatusCode != 200 {
+				t.Errorf("Expected status code 200, but got %v", response.StatusCode)
 			}
 		})
 	}
