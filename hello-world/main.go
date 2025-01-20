@@ -1,34 +1,34 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
-func New200Response(body string) events.APIGatewayProxyResponse {
+func New200Response(message string) events.APIGatewayProxyResponse {
+	payload := map[string]string{"message": "Canary deployments: " + message}
+	body, _ := json.Marshal(payload)
+
 	return events.APIGatewayProxyResponse{
-		Body:       body,
 		StatusCode: 200,
+		Body:       string(body),
 	}
 }
 
-//       body: JSON.stringify({
-//	message: "hello my friend",
-//}),
-
 func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-	var greeting string
+	var message string
 	sourceIP := request.RequestContext.Identity.SourceIP
 
 	if sourceIP == "" {
-		greeting = "Hello, world!!\n"
+		message = "Hello, world!!"
 	} else {
-		greeting = fmt.Sprintf("Hello api: %s client: %s!!\n", request.RequestContext.APIID, sourceIP)
+		message = fmt.Sprintf("Hello api: %s client: %s!!", request.RequestContext.APIID, sourceIP)
 	}
 
-	return New200Response(greeting), nil
+	return New200Response(message), nil
 }
 
 func main() {
