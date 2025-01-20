@@ -11,19 +11,19 @@ on:
 
 env:
   SAM_TEMPLATE: template.yaml
-  TESTING_STACK_NAME: samp-app-dev
-  TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::673007244143:role/aws-sam-cli-managed-dev-pipel-PipelineExecutionRole-6jEY57rHiHdl
-  TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::673007244143:role/aws-sam-cli-managed-dev-p-CloudFormationExecutionRo-Zeyan31xtCgu
-  TESTING_ARTIFACTS_BUCKET: aws-sam-cli-managed-dev-pipeline-r-artifactsbucket-pknothnwjjsl
+  TESTING_STACK_NAME: sam-app-dev
+  TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::673007244143:role/aws-sam-cli-managed-dev-pipel-PipelineExecutionRole-Z472qsvzKgRv
+  TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::673007244143:role/aws-sam-cli-managed-dev-p-CloudFormationExecutionRo-1r5MrIKDvhNb
+  TESTING_ARTIFACTS_BUCKET: aws-sam-cli-managed-dev-pipeline-r-artifactsbucket-i9xw3vy0imzv
   # If there are functions with "Image" PackageType in your template,
   # uncomment the line below and add "--image-repository ${TESTING_IMAGE_REPOSITORY}" to
   # testing "sam package" and "sam deploy" commands.
   # TESTING_IMAGE_REPOSITORY = '0123456789.dkr.ecr.region.amazonaws.com/repository-name'
   TESTING_REGION: eu-west-2
   PROD_STACK_NAME: sam-app-prod
-  PROD_PIPELINE_EXECUTION_ROLE: arn:aws:iam::673007244143:role/aws-sam-cli-managed-prod-pipe-PipelineExecutionRole-AVreITlbt49E
-  PROD_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::673007244143:role/aws-sam-cli-managed-prod--CloudFormationExecutionRo-0VVtbVprztN2
-  PROD_ARTIFACTS_BUCKET: aws-sam-cli-managed-prod-pipeline--artifactsbucket-qi83hvkvafsr
+  PROD_PIPELINE_EXECUTION_ROLE: arn:aws:iam::673007244143:role/aws-sam-cli-managed-prod-pipe-PipelineExecutionRole-8xfmzodhP4ti
+  PROD_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::673007244143:role/aws-sam-cli-managed-prod--CloudFormationExecutionRo-oxQB4HU7moHN
+  PROD_ARTIFACTS_BUCKET: aws-sam-cli-managed-prod-pipeline--artifactsbucket-sfsgso4w9qha
   # If there are functions with "Image" PackageType in your template,
   # uncomment the line below and add "--image-repository ${PROD_IMAGE_REPOSITORY}" to
   # prod "sam package" and "sam deploy" commands.
