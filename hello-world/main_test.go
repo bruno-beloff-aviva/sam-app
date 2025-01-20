@@ -23,7 +23,7 @@ func TestHandler(t *testing.T) {
 					},
 				},
 			},
-			expectedBody:  "{\"message\":\"Canary deployments: Hello, world!!\"}",
+			expectedBody:  "{\"message\":\"Canary deployments 2: Hello, world!!\"}",
 			expectedError: nil,
 		},
 		{
@@ -36,7 +36,7 @@ func TestHandler(t *testing.T) {
 					},
 				},
 			},
-			expectedBody:  "{\"message\":\"Canary deployments: Hello api:  client: 127.0.0.1!!\"}",
+			expectedBody:  "{\"message\":\"Canary deployments 2: Hello client: 127.0.0.1!!\"}",
 			expectedError: nil,
 		},
 	}
