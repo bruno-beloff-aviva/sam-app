@@ -23,7 +23,7 @@ func TestHandler(t *testing.T) {
 					},
 				},
 			},
-			expectedBody:  "{\"message\":\"Canary deployments 2: Hello, world!!\"}",
+			expectedBody:  "{\"message\":\"Canary deployments 3 - Hello, world!!\"}",
 			expectedError: nil,
 		},
 		{
