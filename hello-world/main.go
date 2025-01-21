@@ -9,7 +9,7 @@ import (
 )
 
 func New200Response(message string) events.APIGatewayProxyResponse {
-	payload := map[string]string{"message": "Canary deployments 2: " + message}
+	payload := map[string]string{"message": "Canary deployments 3 - " + message}
 	body, _ := json.Marshal(payload)
 
 	return events.APIGatewayProxyResponse{
@@ -25,7 +25,7 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 	if sourceIP == "" {
 		message = "Hello, world!!"
 	} else {
-		message = fmt.Sprintf("Hello client: %s!!", sourceIP) // request.RequestContext.APIID,
+		message = fmt.Sprintf("Hello client %s!!", sourceIP) // request.RequestContext.APIID,
 	}
 
 	return New200Response(message), nil
